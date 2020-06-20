@@ -1,0 +1,55 @@
+.header{
+    background-color: #eeeeee;
+}
+
+.header_inner{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__user{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__info{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__user-settings{
+    background-color: #ffffff;
+    width: 200px;
+    border: 1px solid silver;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+.header__text{
+    color: black;
+}
+
+.header__logo{
+    width: 48px;
+    height: 48px;
+}
+
+.header__exit{
+    color: black;
+}
