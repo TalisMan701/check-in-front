@@ -3,10 +3,16 @@
 }
 
 .header_inner{
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
+}
+
+.header_inner_noAuth{
+    justify-content: flex-end;
 }
 
 .container{
@@ -23,33 +29,73 @@
     align-items: center;
 }
 
-.header__info{
+.userName{
     display: flex;
-    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    flex-flow: row nowrap;
 }
 
-.header__user-settings{
-    background-color: #ffffff;
-    width: 200px;
-    border: 1px solid silver;
-    padding: 10px;
-    margin: 10px;
+.header__info{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid silver;
+    background-color: #ffffff;
+    padding: 5px;
+    padding-right: 15px;
 }
 
 .header__text{
-    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
 }
 
-.header__logo{
-    width: 48px;
-    height: 48px;
+.headerNameText{
+    color: #333333;
+    margin-right: 20px;
+}
+
+.headerLogo{
+    width: 32px;
+    height: 32px;
 }
 
 .header__exit{
-    color: black;
+    color: #333333;
+    cursor: pointer;
+}
+
+.headerLink{
+    text-decoration: none;
+    margin: 0 5px;
+    color: #333333;
+}
+
+.header__exit:after,
+.header__text:after,
+.headerLink:after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: 0px auto 0px auto;
+    background-color: #f38181;
+    transition: width 0.5s ease;
+}
+
+.header__exit:hover:after,
+.header__text:hover:after,
+.headerLink:hover:after{
+    width: 100%;
+}
+
+.headerNoAuth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
 }

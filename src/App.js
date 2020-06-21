@@ -14,10 +14,12 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
-                <Header/>
-                <Main/>
-                <Footer/>
+            <div className="app">
+                <div className="content">
+                    <Header/>
+                    <Main/>
+                    <Footer/>
+                </div>
             </div>
         );
     }

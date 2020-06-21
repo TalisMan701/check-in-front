@@ -1,5 +1,11 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+  min-height: calc(100vh - 140px);
+  flex: 1 0 auto;
 }
 
 .App-logo {
