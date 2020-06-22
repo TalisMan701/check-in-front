@@ -8,7 +8,7 @@ import {connect} from "react-redux";
 import {getAuthUserData} from "./redux/auth-reducer";
 
 class App extends React.Component {
-    componentDidMount() {
+    componentDidMount(){
         this.props.getAuthUserData()
     }
 
@@ -17,7 +17,7 @@ class App extends React.Component {
             <div className="app">
                 <div className="content">
                     <Header/>
-                    <Main/>
+                    <Main props={this.props}/>
                     <Footer/>
                 </div>
             </div>

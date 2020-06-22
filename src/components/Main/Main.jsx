@@ -4,6 +4,7 @@ import Login from "../Login/Login";
 import Registration from "../Registration/Registration";
 import {Route} from "react-router-dom";
 import PrivateOffice from "../PrivateOffice/PrivateOffice";
+import CalendarContainer from "../Calendar/CalendarContainer";
 
 const Main = (props) => {
     return(
@@ -12,6 +13,7 @@ const Main = (props) => {
                 <Route path={"/login"} render={() => <Login/>} />
                 <Route path={"/registration"} render={() => <Registration/>} />
                 <Route path={"/private_office"} render={() => <PrivateOffice/>} />
+                <Route exact path={"/"} render={() => <CalendarContainer/>} />
             </div>
         </div>
     )

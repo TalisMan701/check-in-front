@@ -1,0 +1,87 @@
+.container{
+    border: 1px solid #eeeeee;
+}
+
+.days{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.dayInner,
+.event{
+    padding: 10px;
+    border-right: 1px solid #eeeeee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dayInner:hover,
+.event:hover{
+    background-color: #eeeeee;
+}
+
+.dayInner:last-child,
+.event{
+    border-right: none;
+}
+.event{
+    border-bottom: 1px solid #eeeeee;
+}
+
+.event:last-child{
+    border-bottom: none;
+}
+
+.dayActive{
+    background-color: #eeeeee;
+}
+
+
+.day{
+    font-size: 18px;
+    font-weight: 500;
+}
+.dayText{
+    font-size: 14px;
+}
+
+.eventGo{
+    background-color: #95e1d3;
+}
+
+.title{
+    font-weight: 500;
+}
+
+.time{
+    font-size: 14px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.btnBack{
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    background-color: #95e1d3;
+    border: 2px solid #95e1d3;
+    color: #ffffff;
+    transition: color,background-color 0.3s ease;
+}
+
+.btnBack:hover{
+    background-color: #ffffff;
+    color: #95e1d3;
+}
+
+.activateEvent{
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}

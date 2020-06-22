@@ -13,7 +13,8 @@ let initialState = {
         patronymic: null,
         group: null
     },
-    isAuth: false
+    isAuth: false,
+    isTeacher: false
 }
 
 const authReducer = (state = initialState, action) =>{
@@ -28,8 +29,8 @@ const authReducer = (state = initialState, action) =>{
     }
 }
 
-const setAuthUserData = (userId, login, email, userInfo, isAuth) => ({type: SET_USER_DATA, data:
-        {userId, login, email, userInfo, isAuth}});
+const setAuthUserData = (userId, login, email, userInfo, isAuth, isTeacher) => ({type: SET_USER_DATA, data:
+        {userId, login, email, userInfo, isAuth, isTeacher}});
 
 export const getAuthUserData = () => (dispatch) => {
     authAPI.me()
@@ -46,6 +47,7 @@ export const getAuthUserData = () => (dispatch) => {
                         group: response.data.group
                     },
                     true,
+                    response.data.is_teacher
                 ));
             }
         });

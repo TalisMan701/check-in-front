@@ -17,7 +17,15 @@ class PrivateOffice extends React.Component {
                             <div className={classes.text} ><span>{this.props.userInfo.surname} {this.props.userInfo.name} {this.props.userInfo.patronymic}</span></div>
                             <div className={classes.phone}>Логин: <span>{this.props.login}</span></div>
                             <div className={classes.email}>Email: <span>{this.props.email}</span></div>
+                            {!this.props.isTeacher &&
                             <div className={classes.text}>Группа: <span>{this.props.userInfo.group}</span></div>
+                            }
+                            {this.props.isTeacher &&
+                            <div className={classes.text}>Преподаватель</div>
+                            }
+                            {!this.props.isTeacher &&
+                            <div className={classes.text}>Студент</div>
+                            }
                         </div>
                         <div className={classes.btns}>
                             <NavLink to={'/'} className={classes.btn}>На главную</NavLink>
@@ -33,7 +41,8 @@ const mapStateToProps = (state) => ({
     login: state.auth.login,
     email: state.auth.email,
     userInfo: state.auth.userInfo,
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    isTeacher: state.auth.isTeacher
 })
 
 export default connect(mapStateToProps,{})(PrivateOffice);
